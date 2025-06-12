@@ -1,7 +1,7 @@
 import type { Route } from "./+types/home";
 import { Welcome } from "~/welcome/welcome";
 
-export function loader({context}: Route.LoaderArgs) {
+export async function loader({context}: Route.LoaderArgs) {
   const valueFromExpress = context?.valueFromExpress;
   return { valueFromExpress};
 }
